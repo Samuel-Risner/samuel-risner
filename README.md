@@ -11,6 +11,6 @@ Test
 
 # Favorite Librarys and stuff
 
-![GameDev: Pygame](https://img.shields.io/badge/GAME%20DEV-PYGAME-480ca8?style=for-the-badgea&logoColor=ffffff)
+![GameDev: Pygame](https://img.shields.io/badge/GAME%20DEV-PYGAME-3a0ca3?style=for-the-badge&logoColor=ffffff)
 ![WebDev: Flask](https://img.shields.io/badge/WEB%20DEV-FLASK-3a0ca3?style=for-the-badge&logo=flask&logoColor=ffffff)
 ![Interested: Electron](https://img.shields.io/badge/INTERESTED-ELECTRON-3f37c9?style=for-the-badge&logo=electron&logoColor=ffffff)
