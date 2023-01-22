@@ -1,8 +1,12 @@
 # chamaedorea-productions
  
-Test
+# ⚗ About me
 
-# My Languages
+- I like developing games and discovering new design principles. For that I either use pygame for desktop games or TypeScript and/or JavaScript for browser games.
+- Tinkering around with Raspberry Pi Picos and other hardware is also something I'm very fond of.  
+- I also like to prank people, so I always have a few repos at my disposel for when they're looking away. I also like creating my own stuff for that and thus exploring new languages and OS features.
+
+# 🔌 My Languages
 
 ![Code: Python](https://img.shields.io/badge/CODE-PYTHON-f72585?style=for-the-badge&logo=python&logoColor=ffffff)
 ![Code: JavaScript](https://img.shields.io/badge/CODE-JAVASCRIPT-b5179e?style=for-the-badge&logo=javascript&logoColor=ffffff)
