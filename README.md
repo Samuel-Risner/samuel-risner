@@ -8,10 +8,10 @@
 
 # 🔌 My Languages
 
-![Everything: Python](https://img.shields.io/badge/CODE-PYTHON-f72585?style=for-the-badge&logo=python&logoColor=ffffff)
-![Server and Client side: TypeScript](https://img.shields.io/badge/CODE-TYPESCRIPT-7209b7?style=for-the-badge&logo=typescript&logoColor=ffffff)
-![School: Java](https://img.shields.io/badge/CODE-JAVA-560bad?style=for-the-badge&logo=java&logoColor=ffffff)
-<!-- ![Compiled from TypeScript: JavaScript](https://img.shields.io/badge/CODE-JAVASCRIPT-b5179e?style=for-the-badge&logo=javascript&logoColor=ffffff) -->
+![Everything: Python](https://img.shields.io/badge/EVERYTHING-PYTHON-f72585?style=for-the-badge&logo=python&logoColor=ffffff)
+![Server and Client side: TypeScript](https://img.shields.io/badge/SERVER%20AND%20CLIENT%20SIDE-TYPESCRIPT-7209b7?style=for-the-badge&logo=typescript&logoColor=ffffff)
+![School: Java](https://img.shields.io/badge/SCHOOL-JAVA-560bad?style=for-the-badge&logo=java&logoColor=ffffff)
+<!-- ![Compiled from TypeScript: JavaScript](https://img.shields.io/badge/COMPILED%20FROM%20TYPESCRIPT-JAVASCRIPT-b5179e?style=for-the-badge&logo=javascript&logoColor=ffffff) -->
 
 # 📚 Favorite Librarys and Stuff
 
@@ -24,4 +24,4 @@
 
 ![IDE: VSCodium](https://img.shields.io/badge/IDE-VS%20CODE-4361ee?style=for-the-badge&logo=vscodium&logoColor=ffffff)
 ![IDE: PyCharm](https://img.shields.io/badge/IDE-VS%20CODE-4361ee?style=for-the-badge&logo=pycharm&logoColor=ffffff)
-![Web Assets: Inkscape](https://img.shields.io/badge/TOOL-INKSCAPE-4cc9f0?style=for-the-badge&logo=inkscape&logoColor=ffffff)
+![Web Assets: Inkscape](https://img.shields.io/badge/WEB%20ASSETS-INKSCAPE-4cc9f0?style=for-the-badge&logo=inkscape&logoColor=ffffff)
