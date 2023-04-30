@@ -1,4 +1,4 @@
-# chamaedorea-productions
+# Samuel Risner
  
 # ⚗ About me
 
