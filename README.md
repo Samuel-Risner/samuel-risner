@@ -21,6 +21,7 @@
 ![Web Dev: ExpressJS](https://img.shields.io/badge/WEB%20DEV-EXPRESSJS-3a0ca3?style=for-the-badge&logo=nodedotjs&logoColor=ffffff)
 ![Template Rendering: Nunjucks](https://img.shields.io/badge/TEMPLATE%20RENDERING-NUNJUCKS-3f37c9?style=for-the-badge&logo=nunjucks&logoColor=ffffff)
 ![Interested: Electron](https://img.shields.io/badge/INTERESTED-ELECTRON-3f37c9?style=for-the-badge&logo=electron&logoColor=ffffff)
+![CSS: TailwindCSS](https://img.shields.io/badge/CSS-TAILWINDCSS-3f37c9?style=for-the-badge&logo=tailwindcss&logoColor=ffffff)
 
 
 # 🛠 Epic Tools
