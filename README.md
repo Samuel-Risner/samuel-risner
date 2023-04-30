@@ -17,11 +17,14 @@
 
 ![Game Dev: Pygame](https://img.shields.io/badge/GAME%20DEV-PYGAME-3a0ca3?style=for-the-badge&logoColor=ffffff)
 ![Web Dev: Flask](https://img.shields.io/badge/WEB%20DEV-FLASK-3a0ca3?style=for-the-badge&logo=flask&logoColor=ffffff)
-![Web Dev: NodeJS](https://img.shields.io/badge/WEB%20DEV-FLASK-3a0ca3?style=for-the-badge&logo=nodedotjs&logoColor=ffffff)
+![Web Dev: NodeJS](https://img.shields.io/badge/WEB%20DEV-EXPRESSJS-3a0ca3?style=for-the-badge&logo=nodedotjs&logoColor=ffffff)
 ![Interested: Electron](https://img.shields.io/badge/INTERESTED-ELECTRON-3f37c9?style=for-the-badge&logo=electron&logoColor=ffffff)
+![Template Rendering: Jinja](https://img.shields.io/badge/TEMPLATE%20RENDERING-JINJA-3f37c9?style=for-the-badge&logo=jinja&logoColor=ffffff)
+![Template Rendering: Nunjucks](https://img.shields.io/badge/TEMPLATE%20RENDERING-NUNJUCKS-3f37c9?style=for-the-badge&logo=nunjucks&logoColor=ffffff)
+
 
 # 🛠 Epic Tools
 
-![IDE: VSCodium](https://img.shields.io/badge/IDE-VS%20CODE-4361ee?style=for-the-badge&logo=vscodium&logoColor=ffffff)
-![IDE: PyCharm](https://img.shields.io/badge/IDE-VS%20CODE-4361ee?style=for-the-badge&logo=pycharm&logoColor=ffffff)
+![IDE: VSCodium](https://img.shields.io/badge/IDE-VSCODIUM-4361ee?style=for-the-badge&logo=vscodium&logoColor=ffffff)
+![IDE: PyCharm](https://img.shields.io/badge/IDE-PYCHARM-4361ee?style=for-the-badge&logo=pycharm&logoColor=ffffff)
 ![Web Assets: Inkscape](https://img.shields.io/badge/WEB%20ASSETS-INKSCAPE-4cc9f0?style=for-the-badge&logo=inkscape&logoColor=ffffff)
