@@ -17,10 +17,10 @@
 
 ![Game Dev: Pygame](https://img.shields.io/badge/GAME%20DEV-PYGAME-3a0ca3?style=for-the-badge&logoColor=ffffff)
 ![Web Dev: Flask](https://img.shields.io/badge/WEB%20DEV-FLASK-3a0ca3?style=for-the-badge&logo=flask&logoColor=ffffff)
-![Web Dev: NodeJS](https://img.shields.io/badge/WEB%20DEV-EXPRESSJS-3a0ca3?style=for-the-badge&logo=nodedotjs&logoColor=ffffff)
-![Interested: Electron](https://img.shields.io/badge/INTERESTED-ELECTRON-3f37c9?style=for-the-badge&logo=electron&logoColor=ffffff)
 ![Template Rendering: Jinja](https://img.shields.io/badge/TEMPLATE%20RENDERING-JINJA-3f37c9?style=for-the-badge&logo=jinja&logoColor=ffffff)
+![Web Dev: ExpressJS](https://img.shields.io/badge/WEB%20DEV-EXPRESSJS-3a0ca3?style=for-the-badge&logo=nodedotjs&logoColor=ffffff)
 ![Template Rendering: Nunjucks](https://img.shields.io/badge/TEMPLATE%20RENDERING-NUNJUCKS-3f37c9?style=for-the-badge&logo=nunjucks&logoColor=ffffff)
+![Interested: Electron](https://img.shields.io/badge/INTERESTED-ELECTRON-3f37c9?style=for-the-badge&logo=electron&logoColor=ffffff)
 
 
 # 🛠 Epic Tools
