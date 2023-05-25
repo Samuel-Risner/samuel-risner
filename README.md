@@ -13,7 +13,7 @@
 ![School: Java](https://img.shields.io/badge/SCHOOL-JAVA-560bad?style=for-the-badge&logo=java&logoColor=ffffff)
 <!-- ![Compiled from TypeScript: JavaScript](https://img.shields.io/badge/COMPILED%20FROM%20TYPESCRIPT-JAVASCRIPT-b5179e?style=for-the-badge&logo=javascript&logoColor=ffffff) -->
 
-# 📚 Favorite Librarys and Stuff
+# 📚 Favorite Libraries and Stuff
 
 ![Game Dev: Pygame](https://img.shields.io/badge/GAME%20DEV-PYGAME-3a0ca3?style=for-the-badge&logoColor=ffffff)
 ![Web Dev: Flask](https://img.shields.io/badge/WEB%20DEV-FLASK-3a0ca3?style=for-the-badge&logo=flask&logoColor=ffffff)
