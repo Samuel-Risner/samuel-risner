@@ -1,45 +1,34 @@
-import os
+import os, base64
+from urllib.request import urlopen, Request
 
 README_INPUT_FILE = os.path.join("build", "README_src.md")
 README_OUTPUT_FILE = os.path.join("README.md")
 
 BADGE_OUTPUT_FOLDER = "badges"
 
-def create_badge(
-        icon_path: str,
-        text: str, text_w: int,
-        output_file: str,
-        font_family: str="Arial", font_size: int=16, text_padding_left: int=2, badge_h: int=25, icon_h: int=20, href_prefix: str="https://raw.githubusercontent.com/Samuel-Risner/samuel-risner/main/"
-    ) -> None:
+SHIELDS_OUTPUT_FOLDER = "shields"
 
-    badge_w = badge_h + text_w + text_padding_left
+def create_shield(output_file: str, input_svg: str, text: str) -> None:
+    with open(input_svg, "r") as d:
+        x = d.read()
 
-    icon_y = (badge_h-icon_h)/2
-    icon_x = icon_y
+    x = base64.b64encode(x.encode("utf-8")).decode("utf-8")
 
-    text_x = badge_h + text_padding_left
-    text_y = badge_h/2
+    x = "data:image/svg+xml;base64," + x
 
-    svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="{badge_w}" height="{badge_h}">
-    
-        <rect x="0" y="0" width="100%" height="100%" fill="#555555"></rect>
-        <rect x="0" y="0" width="{badge_h}" height="{badge_h}" fill="#333333"></rect>
+    url = f"https://img.shields.io/badge/{text}-%23777777?style=for-the-badge&logo={x}&labelColor=%23555555"
 
-        <image href="{href_prefix}{icon_path}" height="{icon_h}" x="{icon_x}" y="{icon_y}"></image>
-
-        <text
-            x="{text_x}"
-            y="{text_y}"
-            font-family="{font_family}"
-            font-size="{font_size}"
-            dominant-baseline="middle"
-            fill="#111">
-            {text}
-        </text>
-    </svg>"""
+    req = Request(
+        url,
+        headers={
+            "User-Agent": "Mozilla/5.0"
+        }
+    )
+    with urlopen(req) as response:
+        data = response.read().decode("utf-8")
 
     with open(output_file, "w") as d:
-        d.write(svg)
+        d.write(data)
 
 def create_img(path: str, text: str) -> str:
     return f'<img title="{text}" alt="{text}" src="{path}">'
@@ -90,10 +79,9 @@ for i in range(1, len(parts), 2):
     value = DATA_DICT.get(key)
 
     if value is not None:
-        badge_path = os.path.join(BADGE_OUTPUT_FOLDER, f"{value["TEXT"]}.svg")
-        create_badge(value["SVG"], value["TEXT"], value["TEXT_W"], badge_path)
-
-        parts[i] = create_img(badge_path, value["TEXT"])
+        shield_path = os.path.join(SHIELDS_OUTPUT_FOLDER, f"{value["TEXT"]}.svg")
+        create_shield(shield_path, value["SVG"], value["TEXT"])
+        parts[i] = create_img(shield_path, value["TEXT"])
     else:
         print(f"ERR - key {key} not in REPLACE_DICT")
 
