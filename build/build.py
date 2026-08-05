@@ -14,7 +14,7 @@ def create_shield(output_file: str, input_svg: str, text: str) -> None:
 
     x = "data:image/svg+xml;base64," + x
 
-    url = f"https://img.shields.io/badge/{text}-%23777777?style=for-the-badge&logo={x}&labelColor=%23555555"
+    url = f"https://img.shields.io/badge/{text}-%23555555?style=for-the-badge&logo={x}&labelColor=%23777777"
 
     req = Request(
         url,
