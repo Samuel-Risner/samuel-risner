@@ -12,7 +12,7 @@ def create_badge(
         font_family: str="Arial", font_size: int=16, text_padding_left: int=2, badge_h: int=25, icon_h: int=20, href_prefix: str="https://raw.githubusercontent.com/Samuel-Risner/samuel-risner/main/"
     ) -> None:
 
-    badge_w = badge_h + text_w
+    badge_w = badge_h + text_w + text_padding_left
 
     icon_y = (badge_h-icon_h)/2
     icon_x = icon_y
