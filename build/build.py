@@ -1,107 +1,79 @@
-import os, re
+import os
 
 README_INPUT_FILE = os.path.join("build", "README_src.md")
 README_OUTPUT_FILE = os.path.join("README.md")
 
-TEXT_SVG_OUTPUT_FOLDER = "text imgs"
+BADGE_OUTPUT_FOLDER = "badges"
 
-SVG_H = 20
+def create_badge(
+        icon_path: str,
+        text: str, text_w: int,
+        output_file: str,
+        font_family: str="Arial", font_size: int=16, text_padding_left: int=2, badge_h: int=25, icon_h: int=20
+    ) -> None:
 
-TEXT_SVG_W = 100
-TEXT_SVG_X = 5
-TEXT_SVG_Y = 12
+    badge_w = badge_h + text_w
 
-def create_text_svg(text: str, output_svg_path: str):
-    new_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="{TEXT_SVG_W}" height="{SVG_H}">
+    icon_y = (badge_h-icon_h)/2
+    icon_x = icon_y
+
+    text_x = badge_h + text_padding_left
+    text_y = badge_h/2
+
+    svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="{badge_w}" height="{badge_h}">
+    
+        <rect x="0" y="0" width="100%" height="100%" fill="#555555"></rect>
+        <rect x="0" y="0" width="{badge_h}" height="{badge_h}" fill="#333333"></rect>
+
+        <image href="{icon_path}" height="{icon_h}" x="{icon_x}" y="{icon_y}"></image>
+
         <text
-            x="{TEXT_SVG_X}"
-            y="{TEXT_SVG_Y}"
-            font-family="Arial"
-            font-size="16"
-            dominant-baseline="middle">
+            x="{text_x}"
+            y="{text_y}"
+            font-family="{font_family}"
+            font-size="{font_size}"
+            dominant-baseline="middle"
+            fill="#111">
             {text}
         </text>
-    </svg>
-    """
+    </svg>"""
 
-    with open(output_svg_path, "w") as d:
-        d.write(new_svg)
+    with open(output_file, "w") as d:
+        d.write(svg)
 
-def create_img(icon_svg_path: str, text_svg_path: str | None, text: str, icon_bg: str | None) -> str:
-    icon_bg_str = "" if icon_bg is None else f"background-color: {icon_bg};"
-
-    icon_svg= f'<img title="{text} Icon" alt="{text} Icon" src="{icon_svg_path}" style="height: {SVG_H}px; {icon_bg_str}">'
-
-    if text_svg_path is None:
-        return icon_svg
-    
-    text_svg = f'<img title="{text}" alt="{text}" src="{text_svg_path}">'
-
-    return icon_svg + text_svg
+def create_img(path: str, text: str) -> str:
+    return f'<img title="{text}" alt="{text}" src="{path}">'
 
 DATA_DICT = {
-    "Docker_Text": {
+    "Docker": {
         "SVG": "imgs/Docker/docker-mark-ocean-blue.svg",
         "TEXT": "Docker",
-        "ICON": False
+        "TEXT_W": 80
     },
-    "TypeScript_Text": {
+    "TypeScript": {
         "SVG": "imgs/TypeScript/ts-logo-512.svg",
         "TEXT": "TypeScript",
-        "ICON": False
+        "TEXT_W": 80
     },
-    "Python_Text": {
+    "Python": {
         "SVG": "imgs/Python/python.svg",
         "TEXT": "Python",
-        "ICON": False
+        "TEXT_W": 80
     },
-    "Java_Text": {
+    "Java": {
         "SVG": "imgs/Java/java.svg",
         "TEXT": "Java",
-        "ICON": False,
-        "ICON_BG": "white"
+        "TEXT_W": 80
     },
-    "React_Text": {
+    "React": {
         "SVG": "imgs/React/react.svg",
         "TEXT": "React",
-        "ICON": False
+        "TEXT_W": 80
         },
-    "Flask_Text": {
+    "Flask": {
         "SVG": "imgs/Flask/flask-icon.svg",
         "TEXT": "Flask",
-        "ICON": False
-    },
-
-    "Docker_Icon": {
-        "SVG": "imgs/Docker/docker-mark-ocean-blue.svg",
-        "TEXT": "Docker",
-        "ICON": True
-    },
-    "TypeScript_Icon": {
-        "SVG": "imgs/TypeScript/ts-logo-512.svg",
-        "TEXT": "TypeScript",
-        "ICON": True
-    },
-    "Python_Icon": {
-        "SVG": "imgs/Python/python.svg",
-        "TEXT": "Python",
-        "ICON": True
-    },
-    "Java_Icon": {
-        "SVG": "imgs/Java/java.svg",
-        "TEXT": "Java",
-        "ICON": True,
-        "ICON_BG": "white"
-    },
-    "React_Icon": {
-        "SVG": "imgs/React/react.svg",
-        "TEXT": "React",
-        "ICON": True
-        },
-    "Flask_Icon": {
-        "SVG": "imgs/Flask/flask-icon.svg",
-        "TEXT": "Flask",
-        "ICON": True
+        "TEXT_W": 80
     },
 }
 
@@ -118,10 +90,10 @@ for i in range(1, len(parts), 2):
     value = DATA_DICT.get(key)
 
     if value is not None:
-        text_svg_output_path = None if value["ICON"] else os.path.join(TEXT_SVG_OUTPUT_FOLDER, f"{value["TEXT"]}.svg")
-        if text_svg_output_path is not None:
-            create_text_svg(value["TEXT"], text_svg_output_path)
-        parts[i] = create_img(value["SVG"], text_svg_output_path, value["TEXT"], value.get("ICON_BG"))
+        badge_path = os.path.join(BADGE_OUTPUT_FOLDER, value["TEXT"])
+        create_badge(value["SVG"], value["TEXT"], value["TEXT_W"], badge_path)
+
+        parts[i] = create_img(badge_path, value["TEXT"])
     else:
         print(f"ERR - key {key} not in REPLACE_DICT")
 

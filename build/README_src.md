@@ -4,26 +4,26 @@
 
 ## Programming Languages
 
-{{ TypeScript_Text }}
+{{ TypeScript }}
 
-{{ Python_Text}}
+{{ Python}}
 
-{{ Java_Text }}
+{{ Java }}
 
 ## Libraries
 
-{{ React_Text }}
+{{ React }}
 
-{{ Flask_Text }}
+{{ Flask }}
 
 ## Tools
 
-{{ Docker_Text }}
+{{ Docker }}
 
 ## Projects
 
 Name and Link | Quick Description | Programming Languages | Libraries/Tools
 --- | --- | --- | ---
-[bintree](https://github.com/Samuel-Risner/bintree) | simple binary tree implementation in Java | {{ Java_Icon }}
-[dijkstra](https://github.com/Samuel-Risner/dijkstra) | WebApp to demonstrate the Dijkstra Algorithm | {{ TypeScript_Icon }} | {{ React_Icon }}
-[sorting-algorithms](https://github.com/Samuel-Risner/sorting-algorithms) | WebApp to demonstrate various sorting algorithms | {{ TypeScript_Icon }} |
+[bintree](https://github.com/Samuel-Risner/bintree) | simple binary tree implementation in Java | {{ Java }}
+[dijkstra](https://github.com/Samuel-Risner/dijkstra) | WebApp to demonstrate the Dijkstra Algorithm | {{ TypeScript }} | {{ React }}
+[sorting-algorithms](https://github.com/Samuel-Risner/sorting-algorithms) | WebApp to demonstrate various sorting algorithms | {{ TypeScript }} |
