@@ -4,8 +4,6 @@ from urllib.request import urlopen, Request
 README_INPUT_FILE = os.path.join("build", "README_src.md")
 README_OUTPUT_FILE = os.path.join("README.md")
 
-BADGE_OUTPUT_FOLDER = "badges"
-
 SHIELDS_OUTPUT_FOLDER = "shields"
 
 def create_shield(output_file: str, input_svg: str, text: str) -> None:
@@ -24,6 +22,7 @@ def create_shield(output_file: str, input_svg: str, text: str) -> None:
             "User-Agent": "Mozilla/5.0"
         }
     )
+
     with urlopen(req) as response:
         data = response.read().decode("utf-8")
 
@@ -36,33 +35,27 @@ def create_img(path: str, text: str) -> str:
 DATA_DICT = {
     "Docker": {
         "SVG": "imgs/Docker/docker-mark-ocean-blue.svg",
-        "TEXT": "Docker",
-        "TEXT_W": 80
+        "TEXT": "Docker"
     },
     "TypeScript": {
         "SVG": "imgs/TypeScript/ts-logo-512.svg",
-        "TEXT": "TypeScript",
-        "TEXT_W": 80
+        "TEXT": "TypeScript"
     },
     "Python": {
         "SVG": "imgs/Python/python.svg",
-        "TEXT": "Python",
-        "TEXT_W": 80
+        "TEXT": "Python"
     },
     "Java": {
         "SVG": "imgs/Java/java.svg",
-        "TEXT": "Java",
-        "TEXT_W": 80
+        "TEXT": "Java"
     },
     "React": {
         "SVG": "imgs/React/react.svg",
-        "TEXT": "React",
-        "TEXT_W": 80
+        "TEXT": "React"
         },
     "Flask": {
         "SVG": "imgs/Flask/flask-icon.svg",
-        "TEXT": "Flask",
-        "TEXT_W": 80
+        "TEXT": "Flask"
     },
 }
 
