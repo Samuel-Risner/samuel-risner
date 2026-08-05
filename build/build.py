@@ -90,7 +90,7 @@ for i in range(1, len(parts), 2):
     value = DATA_DICT.get(key)
 
     if value is not None:
-        badge_path = os.path.join(BADGE_OUTPUT_FOLDER, value["TEXT"])
+        badge_path = os.path.join(BADGE_OUTPUT_FOLDER, f"{value["TEXT"]}.svg")
         create_badge(value["SVG"], value["TEXT"], value["TEXT_W"], badge_path)
 
         parts[i] = create_img(badge_path, value["TEXT"])
