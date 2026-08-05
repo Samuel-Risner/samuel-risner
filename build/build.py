@@ -9,7 +9,7 @@ def create_badge(
         icon_path: str,
         text: str, text_w: int,
         output_file: str,
-        font_family: str="Arial", font_size: int=16, text_padding_left: int=2, badge_h: int=25, icon_h: int=20, href_prefix: str="https://raw.githubusercontent.com/Samuel-Risner/samuel-risner/refs/heads/main/"
+        font_family: str="Arial", font_size: int=16, text_padding_left: int=2, badge_h: int=25, icon_h: int=20, href_prefix: str="https://raw.githubusercontent.com/Samuel-Risner/samuel-risner/main/"
     ) -> None:
 
     badge_w = badge_h + text_w
