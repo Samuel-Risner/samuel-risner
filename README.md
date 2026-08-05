@@ -8,7 +8,11 @@
 
 <img title="Python" alt="Python" src="shields\Python.svg">
 
+<img title="MicroPython" alt="MicroPython" src="shields\MicroPython.svg">
+
 <img title="Java" alt="Java" src="shields\Java.svg">
+
+<img title="C" alt="C" src="shields\C.svg">
 
 ## Libraries
 

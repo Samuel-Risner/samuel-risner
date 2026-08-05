@@ -6,9 +6,13 @@
 
 {{ TypeScript }}
 
-{{ Python}}
+{{ Python }}
+
+{{ MicroPython }}
 
 {{ Java }}
+
+{{ C }}
 
 ## Libraries
 

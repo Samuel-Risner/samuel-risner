@@ -42,8 +42,12 @@ DATA_DICT = {
         "TEXT": "TypeScript"
     },
     "Python": {
-        "SVG": "imgs/Python/python.svg",
-        "TEXT": "Python"
+            "SVG": "imgs/Python/python.svg",
+            "TEXT": "Python"
+        },
+    "MicroPython": {
+        "SVG": "imgs/MicroPython/micropython.svg",
+        "TEXT": "MicroPython"
     },
     "Java": {
         "SVG": "imgs/Java/java.svg",
@@ -56,6 +60,10 @@ DATA_DICT = {
     "Flask": {
         "SVG": "imgs/Flask/flask-icon.svg",
         "TEXT": "Flask"
+    },
+    "C": {
+        "SVG": "imgs/C/c.svg",
+        "TEXT": "C"
     },
 }
 
