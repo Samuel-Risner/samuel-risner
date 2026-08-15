@@ -8,7 +8,7 @@
 
 ## Programming Languages
 
-![TypeScript](shields/TypeScript.svg) ![Python](shields/Python.svg) ![MicroPython](shields/MicroPython.svg) ![Java](shields/Java.svg) ![C](shields/C.svg)
+[![TypeScript](shields/TypeScript.svg)]() ![Python](shields/Python.svg) ![MicroPython](shields/MicroPython.svg) ![Java](shields/Java.svg) ![C](shields/C.svg)
 
 ## Libraries
 
