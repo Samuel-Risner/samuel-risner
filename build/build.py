@@ -45,9 +45,9 @@ def create_shield(output_file: str, input_svg: str, icon_text:str, text: str) ->
 
 def create_img(path: str, alt: str, link: str | None) -> str:
     if link is None:
-        return f"[![{alt}]({path})]()"
+        return f'<a> <img alt="{alt}" src="{path}"> </a>'
     else:
-        return f"[![{alt}]({path})]({link})"
+        return f'<a target="_blank" href="{link}"> <img alt="{alt}" src="{path}"> </a>'
 
 DATA_DICT = {
     "C": {
