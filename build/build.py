@@ -4,9 +4,17 @@ from urllib.request import urlopen, Request
 README_INPUT_FILE = os.path.join("build", "README_src.md")
 README_OUTPUT_FILE = os.path.join("README.md")
 
+CACHE_FILE = os.path.join("build", "cache")
+
 SHIELDS_OUTPUT_FOLDER = "shields"
 
-def create_shield(output_file: str, input_svg: str, text: str) -> None:
+cache: list[str] = []
+new_cache: list[str] = []
+
+with open(CACHE_FILE, "r") as d:
+    cache = d.readlines()
+
+def create_shield(output_file: str, input_svg: str, icon_text:str, text: str) -> None:
     with open(input_svg, "r") as d:
         x = d.read()
 
@@ -14,7 +22,13 @@ def create_shield(output_file: str, input_svg: str, text: str) -> None:
 
     x = "data:image/svg+xml;base64," + x
 
-    url = f"https://img.shields.io/badge/{text}-%23555555?style=for-the-badge&logo={x}&labelColor=%23777777"
+    url = f"https://img.shields.io/badge/{icon_text}-{text}-%23555555?style=for-the-badge&logo={x}&labelColor=%23777777"
+
+    if url + "\n" not in new_cache:
+        new_cache.append(url + "\n")
+
+    if url + "\n" in cache:
+        return
 
     req = Request(
         url,
@@ -29,41 +43,83 @@ def create_shield(output_file: str, input_svg: str, text: str) -> None:
     with open(output_file, "w") as d:
         d.write(data)
 
-def create_img(path: str, text: str) -> str:
-    return f'<img title="{text}" alt="{text}" src="{path}">'
+def create_img(path: str, text: str, link: str | None) -> str:
+    # return f'<img title="{text}" alt="{text}" src="{path}">'
+    if link is None:
+        return f"![{text}]({path})"
+    else:
+        return f"[![{text}]({path})]({link})"
 
 DATA_DICT = {
+    "C": {
+        "SVG": "imgs/C/c.svg",
+        "SVG_TEXT": "",
+        "TEXT": "C",
+        "FILE": "C.svg",
+        "URL": None
+    },
     "Docker": {
         "SVG": "imgs/Docker/docker-mark-ocean-blue.svg",
-        "TEXT": "Docker"
+        "SVG_TEXT": "",
+        "TEXT": "Docker",
+        "FILE": "Docker.svg",
+        "URL": None
     },
-    "TypeScript": {
-        "SVG": "imgs/TypeScript/ts-logo-512.svg",
-        "TEXT": "TypeScript"
+    "Docker-Me": {
+        "SVG": "imgs/Docker/docker-mark-ocean-blue.svg",
+        "SVG_TEXT": "Docker",
+        "TEXT": "srisner",
+        "FILE": "Docker-Me.svg",
+        "URL": "https://hub.docker.com/repositories/srisner"
     },
-    "Python": {
-            "SVG": "imgs/Python/python.svg",
-            "TEXT": "Python"
-        },
-    "MicroPython": {
-        "SVG": "imgs/MicroPython/micropython.svg",
-        "TEXT": "MicroPython"
+    "Flask": {
+        "SVG": "imgs/Flask/flask-icon.svg",
+        "SVG_TEXT": "",
+        "TEXT": "Flask",
+        "FILE": "Flask.svg",
+        "URL": None
+    },
+    "Itch.io-Me": {
+        "SVG": "imgs/Itch/itchio-logo-textless-black.svg",
+        "SVG_TEXT": "Itch.io",
+        "TEXT": "Samuel%20Risner",
+        "FILE": "Itch-Me.svg",
+        "URL": "https://itch.io/profile/samuel-risner"
     },
     "Java": {
         "SVG": "imgs/Java/java.svg",
-        "TEXT": "Java"
+        "SVG_TEXT": "",
+        "TEXT": "Java",
+        "FILE": "Java.svg",
+        "URL": None
+    },
+    "MicroPython": {
+        "SVG": "imgs/MicroPython/micropython.svg",
+        "SVG_TEXT": "",
+        "TEXT": "MicroPython",
+        "FILE": "MicroPython.svg",
+        "URL": None
+    },
+    "Python": {
+        "SVG": "imgs/Python/python.svg",
+        "SVG_TEXT": "",
+        "TEXT": "Python",
+        "FILE": "Python.svg",
+        "URL": None
     },
     "React": {
         "SVG": "imgs/React/react.svg",
-        "TEXT": "React"
+        "SVG_TEXT": "",
+        "TEXT": "React",
+        "FILE": "React.svg",
+        "URL": None
         },
-    "Flask": {
-        "SVG": "imgs/Flask/flask-icon.svg",
-        "TEXT": "Flask"
-    },
-    "C": {
-        "SVG": "imgs/C/c.svg",
-        "TEXT": "C"
+    "TypeScript": {
+        "SVG": "imgs/TypeScript/ts-logo-512.svg",
+        "SVG_TEXT": "",
+        "TEXT": "TypeScript",
+        "FILE": "TypeScript.svg",
+        "URL": None
     },
 }
 
@@ -80,11 +136,14 @@ for i in range(1, len(parts), 2):
     value = DATA_DICT.get(key)
 
     if value is not None:
-        shield_path = os.path.join(SHIELDS_OUTPUT_FOLDER, f"{value["TEXT"]}.svg")
-        create_shield(shield_path, value["SVG"], value["TEXT"])
-        parts[i] = create_img(shield_path, value["TEXT"])
+        shield_path = os.path.join(SHIELDS_OUTPUT_FOLDER, value["FILE"])
+        create_shield(shield_path, value["SVG"], value["SVG_TEXT"], value["TEXT"])
+        parts[i] = create_img(shield_path, value["TEXT"], value["URL"])
     else:
         print(f"ERR - key {key} not in REPLACE_DICT")
 
 with open(README_OUTPUT_FILE, "w") as d:
     d.write("".join(parts))
+
+with open(CACHE_FILE, "w") as d:
+    d.writelines(new_cache)
