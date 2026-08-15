@@ -43,12 +43,11 @@ def create_shield(output_file: str, input_svg: str, icon_text:str, text: str) ->
     with open(output_file, "w") as d:
         d.write(data)
 
-def create_img(path: str, text: str, link: str | None) -> str:
-    # return f'<img title="{text}" alt="{text}" src="{path}">'
+def create_img(path: str, alt: str, link: str | None) -> str:
     if link is None:
-        return f"![{text}]({path})"
+        return f'<img src="{path}" alt="{alt}">'
     else:
-        return f"[![{text}]({path})]({link})"
+        return f"[![{alt}]({path})]({link})"
 
 DATA_DICT = {
     "C": {
