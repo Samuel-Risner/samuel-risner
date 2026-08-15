@@ -8,22 +8,22 @@
 
 ## Programming Languages
 
-<img src="shields/TypeScript.svg" alt="TypeScript"> <img src="shields/Python.svg" alt="Python"> <img src="shields/MicroPython.svg" alt="MicroPython"> <img src="shields/Java.svg" alt="Java"> <img src="shields/C.svg" alt="C">
+[![TypeScript](shields/TypeScript.svg)]() [![Python](shields/Python.svg)]() [![MicroPython](shields/MicroPython.svg)]() [![Java](shields/Java.svg)]() [![C](shields/C.svg)]()
 
 ## Libraries
 
-<img src="shields/React.svg" alt="React"> <img src="shields/Flask.svg" alt="Flask">
+[![React](shields/React.svg)]() [![Flask](shields/Flask.svg)]()
 
 ## Tools
 
-<img src="shields/Docker.svg" alt="Docker">
+[![Docker](shields/Docker.svg)]()
 
 ## Projects
 
 Name and Link | Quick Description | Programming Languages | Libraries/Tools
 --- | --- | --- | ---
-[bintree](https://github.com/Samuel-Risner/bintree) | simple binary tree implementation in Java | <img src="shields/Java.svg" alt="Java">
-[dijkstra](https://github.com/Samuel-Risner/dijkstra) | WebApp to demonstrate the Dijkstra Algorithm | <img src="shields/TypeScript.svg" alt="TypeScript"> | <img src="shields/React.svg" alt="React">
-[sorting-algorithms](https://github.com/Samuel-Risner/sorting-algorithms) | WebApp to demonstrate various sorting algorithms | <img src="shields/TypeScript.svg" alt="TypeScript"> |
-[happy-hues](https://github.com/Samuel-Risner/happy-hues) | Simple color-sorting puzzle game where players organize liquids into matching tubes | <img src="shields/TypeScript.svg" alt="TypeScript"> | <img src="shields/React.svg" alt="React">
-[nextcloud-calendar-server](https://github.com/Samuel-Risner/nextcloud-calendar-server) | Simple relay server for calendar integration in self hosted Nextcloud | <img src="shields/Python.svg" alt="Python"> | <img src="shields/Flask.svg" alt="Flask"> <img src="shields/Docker.svg" alt="Docker">
+[bintree](https://github.com/Samuel-Risner/bintree) | simple binary tree implementation in Java | [![Java](shields/Java.svg)]()
+[dijkstra](https://github.com/Samuel-Risner/dijkstra) | WebApp to demonstrate the Dijkstra Algorithm | [![TypeScript](shields/TypeScript.svg)]() | [![React](shields/React.svg)]()
+[sorting-algorithms](https://github.com/Samuel-Risner/sorting-algorithms) | WebApp to demonstrate various sorting algorithms | [![TypeScript](shields/TypeScript.svg)]() |
+[happy-hues](https://github.com/Samuel-Risner/happy-hues) | Simple color-sorting puzzle game where players organize liquids into matching tubes | [![TypeScript](shields/TypeScript.svg)]() | [![React](shields/React.svg)]()
+[nextcloud-calendar-server](https://github.com/Samuel-Risner/nextcloud-calendar-server) | Simple relay server for calendar integration in self hosted Nextcloud | [![Python](shields/Python.svg)]() | [![Flask](shields/Flask.svg)]() [![Docker](shields/Docker.svg)]()
