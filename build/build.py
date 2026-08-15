@@ -138,7 +138,7 @@ for i in range(1, len(parts), 2):
     if value is not None:
         shield_path = os.path.join(SHIELDS_OUTPUT_FOLDER, value["FILE"])
         create_shield(shield_path, value["SVG"], value["SVG_TEXT"], value["TEXT"])
-        parts[i] = create_img(shield_path, value["TEXT"], value["URL"])
+        parts[i] = create_img(f"{SHIELDS_OUTPUT_FOLDER}/{value["FILE"]}", value["TEXT"], value["URL"])
     else:
         print(f"ERR - key {key} not in REPLACE_DICT")
 
